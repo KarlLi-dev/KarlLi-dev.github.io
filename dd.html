@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- <link rel="SHORTCUT ICON" href="sss.ico">
+    <link rel="BOOKMARK" href="sss.ico"> -->
+    <style type="text/css">
+
+    </style>
+
+
+    <script type="text/javascript">
+
+    function random_region(s, e)
+    {
+        if(s >= e)
+        {
+            return e;
+        }
+        let res = Math.floor(Math.random() * (e - s)) + s;
+        return res;
+    }
+         
+         for(let i = 0; i< 100; i++)
+         {
+             console.log( random_region(2, 5));
+         }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div id="fs_img_container">
+        <img id="fs_img" src="/Users/lihongang/Desktop/Imgs/宇宙图/download-1.jpg" />
+        <div id="sp_loading">3/3</div>
+    </div>
+    <div id="Btnt" onclick="foo()"></div>
+
+</body>
+
+</html>
