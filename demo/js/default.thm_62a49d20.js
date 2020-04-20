@@ -10,7 +10,51 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/common/skins/slot_view.exml'] = window.$exmlClass1 = (function (_super) {
+	__extends($exmlClass1, _super);
+	function $exmlClass1() {
+		_super.call(this);
+		this.skinParts = ["area","list_view","scroller_view"];
+		
+		this.height = 260;
+		this.width = 128;
+		this.elementsContent = [this.area_i(),this.scroller_view_i()];
+		
+		eui.Binding.$bindProperties(this, ["area"],[0],this.scroller_view,"mask");
+	}
+	var _proto = $exmlClass1.prototype;
+
+	_proto.area_i = function () {
+		var t = new eui.Rect();
+		this.area = t;
+		t.percentHeight = 100;
+		t.horizontalCenter = 0;
+		t.strokeAlpha = 1;
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.scroller_view_i = function () {
+		var t = new eui.Scroller();
+		this.scroller_view = t;
+		t.bottom = 0;
+		t.height = 658;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 230;
+		t.viewport = this.list_view_i();
+		return t;
+	};
+	_proto.list_view_i = function () {
+		var t = new eui.List();
+		this.list_view = t;
+		return t;
+	};
+	return $exmlClass1;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -632,48 +676,4 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return VSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/slot_view.exml'] = window.$exmlClass1 = (function (_super) {
-	__extends($exmlClass1, _super);
-	function $exmlClass1() {
-		_super.call(this);
-		this.skinParts = ["area","list_view","scroller_view"];
-		
-		this.height = 260;
-		this.width = 128;
-		this.elementsContent = [this.area_i(),this.scroller_view_i()];
-		
-		eui.Binding.$bindProperties(this, ["area"],[0],this.scroller_view,"mask");
-	}
-	var _proto = $exmlClass1.prototype;
-
-	_proto.area_i = function () {
-		var t = new eui.Rect();
-		this.area = t;
-		t.percentHeight = 100;
-		t.horizontalCenter = 0;
-		t.strokeAlpha = 1;
-		t.verticalCenter = 0;
-		t.percentWidth = 100;
-		return t;
-	};
-	_proto.scroller_view_i = function () {
-		var t = new eui.Scroller();
-		this.scroller_view = t;
-		t.bottom = 0;
-		t.height = 376;
-		t.horizontalCenter = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.percentWidth = 100;
-		t.x = 0;
-		t.y = 230;
-		t.viewport = this.list_view_i();
-		return t;
-	};
-	_proto.list_view_i = function () {
-		var t = new eui.List();
-		this.list_view = t;
-		return t;
-	};
-	return $exmlClass1;
 })(eui.Skin);

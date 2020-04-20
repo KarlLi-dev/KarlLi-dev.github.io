@@ -125,31 +125,6 @@
 			"url": "assets/egret_icon.png",
 			"type": "image",
 			"name": "egret_icon_png"
-		},
-		{
-			"url": "img/1.png",
-			"type": "image",
-			"name": "1_png"
-		},
-		{
-			"url": "img/2.png",
-			"type": "image",
-			"name": "2_png"
-		},
-		{
-			"url": "img/3.png",
-			"type": "image",
-			"name": "3_png"
-		},
-		{
-			"url": "img/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
-			"url": "img/button.png",
-			"type": "image",
-			"name": "button_png"
 		}
 	]
 }
